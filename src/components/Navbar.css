@@ -2,30 +2,31 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.2rem 3rem;
+  padding: 1.2rem 1.5rem;
   background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
   color: white;
   position: sticky;
   top: 0;
   z-index: 999;
+  flex-wrap: wrap;
 }
 
 .navbar-left {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-transform: lowercase;
+.logo img {
+  width: 120px;
 }
 
-.nav-links {
+.nav-links ul {
   display: flex;
   list-style: none;
-  gap: 1.5rem;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links a {
@@ -41,7 +42,8 @@
 
 .navbar-right {
   display: flex;
-  gap: 1rem;
+  align-items: center;
+  gap: 0.8rem;
 }
 
 .login-btn {
@@ -69,4 +71,43 @@
 
 .demo-btn:hover {
   background-color: #7f75e0;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-links ul {
+    flex-direction: column;
+    background-color: #1e1e2f;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+    display: none;
+  }
+
+  .nav-links.active ul {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar-right {
+    gap: 0.5rem;
+  }
+
+  .navbar-left {
+    width: 100%;
+    justify-content: space-between;
+  }
 }
