@@ -1,6 +1,5 @@
 // src/components/Hero.jsx
 import React from 'react';
-import { FaBlackTie } from 'react-icons/fa';
 
 const Hero = () => {
   return (
@@ -56,16 +55,14 @@ const Hero = () => {
               <input type="text" placeholder="Type your name here..." style={{ ...inputStyle, color: 'white' }} />
             </div>
 
-            <div style={{ marginBottom: '16px' }}>
+            <div style={{ marginBottom: '16px', position: 'relative' }}>
               <label style={labelStyle}>Email Address</label>
-              <div style={{ position: 'relative' }}>
-                <span style={iconStyle}>📧</span>
-                <input
-                  type="email"
-                  placeholder="Type your email here..."
-                  style={{ ...inputStyle, paddingLeft: '30px', color: 'white' }}
-                />
-              </div>
+              <span style={iconStyle}>📧</span>
+              <input
+                type="email"
+                placeholder="Type your email here..."
+                style={{ ...inputStyle, paddingLeft: '30px', color: 'white', maxWidth: '650px' }}
+              />
             </div>
 
             <div style={{ marginBottom: '24px' }}>
@@ -84,17 +81,17 @@ const Hero = () => {
 
       {/* Logo Strip Below Form */}
       <div style={{ marginTop: '80px', width: '100%' }}>
-        <p style={{ color: '#fff', fontSize: '1rem', marginBottom: '20px', textAlign: 'center' }}>
-        
-        </p>
-        <div style={{
-          display: 'flex',
-          flexWrap: 'wrap',
-          justifyContent: 'space-around',
-          gap: '3rem',
-          alignItems: 'center',
-          padding: '0 2rem'
-        }}>
+        <p style={{ color: '#fff', fontSize: '1rem', marginBottom: '20px', textAlign: 'center' }}></p>
+        <div
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'space-around',
+            gap: '3rem',
+            alignItems: 'center',
+            padding: '0 2rem',
+          }}
+        >
           <img src="/assets/aws.png" alt="AWS" style={logoStyle} />
           <img src="/assets/microsoft.png" alt="Microsoft" style={logoStyle} />
           <img src="/assets/nasscom.png" alt="NASSCOM" style={logoStyle} />
